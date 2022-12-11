@@ -17,9 +17,18 @@ globalStyle("body", {
   fontSize: theme.fontSizes.sm,
   fontWeight: "bold",
   letterSpacing: theme.letterSpacings.tight,
+  overflowX: "hidden"
 });
 
 globalStyle("a", {
   textDecoration: 'none',
   color: 'inherit'
+})
+
+globalStyle("ul", {
+  all: "unset"
+})
+
+globalStyle("div", {
+  display: "inherit"
 })
