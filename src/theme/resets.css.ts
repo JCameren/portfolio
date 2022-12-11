@@ -17,3 +17,8 @@ globalStyle("body", {
   fontSize: theme.fontSizes.sm,
   letterSpacing: theme.letterSpacings.tight,
 });
+
+globalStyle("a", {
+  textDecoration: 'none',
+  color: 'inherit'
+})

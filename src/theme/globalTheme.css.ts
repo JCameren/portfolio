@@ -12,7 +12,7 @@ const fonts = {
 };
 
 const fontSizes = {
-  lg: "clamp(2rem, 7vw, 2.5rem)",
+  lg: "clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem);",
   md: "clamp(1.5, 5vw, 1.75rem)",
   sm: "clamp(0.9rem, 3vw, 1rem)",
   xs: "clamp(0.75rem, 2vw, 0.8rem)",
@@ -35,12 +35,6 @@ const positions = {
   trueCenter: '0 auto'
 }
 
-const breakpoints = {
-  lg: "800px",
-  md: "600px",
-  sm: "480px",
-};
-
 export const theme = createGlobalTheme(":root", {
   colors,
   letterSpacings,
@@ -48,6 +42,5 @@ export const theme = createGlobalTheme(":root", {
   fonts,
   shadows,
   sizes,
-  breakpoints,
   positions,
 });
