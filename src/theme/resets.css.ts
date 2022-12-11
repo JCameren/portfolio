@@ -15,6 +15,7 @@ globalStyle("body", {
   backgroundColor: colors.background,
   fontFamily: theme.fonts.text,
   fontSize: theme.fontSizes.sm,
+  fontWeight: "bold",
   letterSpacing: theme.letterSpacings.tight,
 });
 

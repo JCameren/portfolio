@@ -7,6 +7,6 @@ export const colors = {
     primary: "#007FFF",
     secondary: "#0059B2", 
     textAlt: "#fff",
-    linearGradient: `linear-gradient(to right bottom, #007FFF, #0059B2 120%)`,
+    linearGradient: "linear-gradient(to right bottom, #007FFF, #0059B2 120%)",
     hoverSubtleBlue: "#C2E0FF"
 }

@@ -9,7 +9,7 @@ export const container = style({
 
 export type Containers = "large" | "medium" | "small" | "extraSmall";
 
-export const containers: Record<Containers, string> = styleVariants({
+export const containerVariants: Record<Containers, string> = styleVariants({
   large: [
     container,
     {
@@ -92,10 +92,29 @@ export const flexVariants: Record<FlexVariants, string> = styleVariants({
   },
 });
 
+export const grid = style({
+  display: "grid",
+  alignItems: "center",
+  gridTemplateColumns: "1fr 1fr 1fr",
+  gap: "1rem",
+  "@media": {
+    "screen and (max-width: 800px)": {
+        gridTemplateColumns: "1fr 1fr"
+    },
+    "screen and (max-width: 600px)": {
+        gridTemplateColumns: "1fr"
+    }
+  }
+})
+
 // card style
 export const card = style({
   borderRadius: "0.375rem",
   padding: "1.25rem",
+  transition: "all 250ms ease-in-out",
+  ':hover': {
+    backgroundColor: theme.colors.muted
+  }
 });
 
 export type Cards = "outlined" | "filled" | "colorful" | "hoverable";
@@ -105,6 +124,9 @@ export const cardVariants: Record<Cards, string> = styleVariants({
     card,
     {
       border: `1px solid ${theme.colors.muted}`,
+      ':hover': {
+        backgroundColor: 'transparent'
+      }
     },
   ],
   filled: [
@@ -112,20 +134,27 @@ export const cardVariants: Record<Cards, string> = styleVariants({
     {
       border: `1px solid ${theme.colors.muted}`,
       backgroundColor: theme.colors.foreground,
+      ':hover': {
+        background: theme.colors.foreground
+      }
     },
   ],
   colorful: [
     card,
     {
-      backgroundColor: theme.colors.linearGradient,
+      backgroundColor: "linear-gradient(to right #007FFF, #0059B2 120%)",
+      color: theme.colors.textAlt,
     },
   ],
   hoverable: [
     card,
     {
-      transition: "all 250ms ease-in-out",
+      backgroundColor: theme.colors.foreground, 
+      border: `thin solid ${theme.colors.muted}`,
+      cursor: "pointer", 
       ":hover": {
         boxShadow: theme.shadows.subtleElevated,
+        background: theme.colors.linearGradient
       },
     },
   ],
@@ -140,10 +169,10 @@ export const button = style({
   all: "unset",
   borderRadius: "0.375rem",
   fontSize: theme.fontSizes.md,
-  padding: "0.75rem",
-  backgroundColor: "transparent",
   fontFamily: theme.fonts.text,
+  padding: "1rem 3rem",
   border: `1px solid ${theme.colors.muted}`,
+  letterSpacing: theme.letterSpacings.tight,
   display: "inline-flex",
   transition: "all 250ms ease-in-out",
 });
@@ -166,9 +195,10 @@ export const buttonVariants: Record<Buttons, string> = styleVariants({
     {
       border: `1px solid ${theme.colors.primary}`,
       color: theme.colors.textAlt,
-      backgroundColor: `1px solid ${theme.colors.primary}`,
+      backgroundColor: theme.colors.primary,
       ":hover": {
         backgroundColor: theme.colors.secondary,
+        border: `1px solid ${theme.colors.secondary}`
       },
     },
   ],
@@ -196,3 +226,34 @@ export const textVariants: Record<TextVariants, string> = styleVariants({
     fontWeight: "bold",
   },
 });
+
+// spacers :D
+export type SpacerVariants = "lg" | "md" | "sm" | "xs"
+
+export const spacerVariants: Record<SpacerVariants, string> = styleVariants({
+    lg: {
+        padding: "6rem",
+        "@media": {
+            "screen and (max-width: 800px)": {
+                padding: "3rem"
+            },
+            "screen and (max-width: 480px)": {
+                padding: "2.5rem"
+            }
+        }
+    },
+    md: {
+        padding: "3rem",
+        "@media": {
+            "screen and (max-width: 480px)": {
+                padding: "1rem"
+            }
+        }
+    },
+    sm: {
+        padding: "1rem"
+    },
+    xs: {
+        padding: "0.5rem"
+    }
+})
