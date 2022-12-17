@@ -1,10 +1,10 @@
 import { style, styleVariants } from "@vanilla-extract/css";
 import { type } from "os";
-import { theme } from "../../theme/globalTheme.css";
+import { vars } from "../../styles/theme.css";
 
 // container styles
 export const container = style({
-  margin: theme.positions.trueCenter,
+  margin: vars.positions.trueCenter,
   position: "relative",
 });
 
@@ -14,7 +14,7 @@ export const containerVariants: Record<Containers, string> = styleVariants({
   large: [
     container,
     {
-      width: theme.sizes.lgContainer,
+      width: vars.sizes.lgContainer,
       "@media": {
         "screen and (max-width: 800px)": {
           width: "85%",
@@ -28,7 +28,7 @@ export const containerVariants: Record<Containers, string> = styleVariants({
   medium: [
     container,
     {
-      width: theme.sizes.mdContainer,
+      width: vars.sizes.mdContainer,
       "@media": {
         "screen and (max-width: 800px)": {
           width: "70%",
@@ -42,7 +42,7 @@ export const containerVariants: Record<Containers, string> = styleVariants({
   small: [
     container,
     {
-      width: theme.sizes.smContainer,
+      width: vars.sizes.smContainer,
       "@media": {
         "screen and (max-width: 800px)": {
           width: "70%",
@@ -56,7 +56,7 @@ export const containerVariants: Record<Containers, string> = styleVariants({
   extraSmall: [
     container,
     {
-      width: theme.sizes.xsContainer,
+      width: vars.sizes.xsContainer,
     },
   ],
 });
@@ -134,7 +134,7 @@ export const card = style({
   padding: "1.25rem",
   transition: "all 250ms ease-in-out",
   ":hover": {
-    backgroundColor: theme.colors.muted,
+    backgroundColor: vars.colors.muted,
   },
 });
 
@@ -156,7 +156,7 @@ export const cardVariants: Record<Cards, string> = styleVariants({
   outlined: [
     card,
     {
-      border: `1px solid ${theme.colors.muted}`,
+      border: `1px solid ${vars.colors.muted}`,
       ":hover": {
         backgroundColor: "transparent",
       },
@@ -165,10 +165,10 @@ export const cardVariants: Record<Cards, string> = styleVariants({
   filled: [
     card,
     {
-      border: `1px solid ${theme.colors.muted}`,
-      backgroundColor: theme.colors.foreground,
+      border: `1px solid ${vars.colors.muted}`,
+      backgroundColor: vars.colors.foreground,
       ":hover": {
-        background: theme.colors.foreground,
+        background: vars.colors.foreground,
       },
     },
   ],
@@ -176,18 +176,18 @@ export const cardVariants: Record<Cards, string> = styleVariants({
     card,
     {
       backgroundColor: "linear-gradient(to right #007FFF, #0059B2 120%)",
-      color: theme.colors.textAlt,
+      color: vars.colors.textAlt,
     },
   ],
   hoverable: [
     card,
     {
-      backgroundColor: theme.colors.foreground,
-      border: `thin solid ${theme.colors.muted}`,
+      backgroundColor: vars.colors.foreground,
+      border: `thin solid ${vars.colors.muted}`,
       cursor: "pointer",
       ":hover": {
-        boxShadow: theme.shadows.subtleElevated,
-        background: theme.colors.linearGradient,
+        boxShadow: vars.shadows.subtleElevated,
+        background: vars.colors.linearGradient,
       },
     },
   ],
@@ -201,11 +201,11 @@ export const list = style({
 export const button = style({
   all: "unset",
   borderRadius: "0.375rem",
-  fontSize: theme.fontSizes.md,
-  fontFamily: theme.fonts.text,
+  fontSize: vars.fontSizes.md,
+  fontFamily: vars.fonts.text,
   padding: "1rem 3rem",
-  border: `1px solid ${theme.colors.muted}`,
-  letterSpacing: theme.letterSpacings.tight,
+  border: `1px solid ${vars.colors.muted}`,
+  letterSpacing: vars.letterSpacings.tight,
   display: "inline-flex",
   transition: "all 250ms ease-in-out",
 });
@@ -216,22 +216,22 @@ export const buttonVariants: Record<Buttons, string> = styleVariants({
   colorOutline: [
     button,
     {
-      border: `1px solid ${theme.colors.primary}`,
-      color: theme.colors.primary,
+      border: `1px solid ${vars.colors.primary}`,
+      color: vars.colors.primary,
       ":hover": {
-        backgroundColor: theme.colors.hoverSubtleBlue,
+        backgroundColor: vars.colors.hoverSubtleBlue,
       },
     },
   ],
   filled: [
     button,
     {
-      border: `1px solid ${theme.colors.primary}`,
-      color: theme.colors.textAlt,
-      backgroundColor: theme.colors.primary,
+      border: `1px solid ${vars.colors.primary}`,
+      color: vars.colors.textAlt,
+      backgroundColor: vars.colors.primary,
       ":hover": {
-        backgroundColor: theme.colors.secondary,
-        border: `1px solid ${theme.colors.secondary}`,
+        backgroundColor: vars.colors.secondary,
+        border: `1px solid ${vars.colors.secondary}`,
       },
     },
   ],
@@ -242,27 +242,27 @@ export type TextVariants = "small" | "body" | "heading" | "banner";
 
 export const textVariants: Record<TextVariants, string> = styleVariants({
   small: {
-    fontSize: theme.fontSizes.xs,
-    color: theme.colors.textSubtle,
+    fontSize: vars.fontSizes.xs,
+    color: vars.colors.textSubtle,
     fontWeight: "thin",
   },
   body: {
-    fontSize: theme.fontSizes.sm,
+    fontSize: vars.fontSizes.sm,
     fontWeight: "thin",
-    color: theme.colors.textSubtle,
+    color: vars.colors.textSubtle,
   },
   heading: {
-    fontSize: theme.fontSizes.md,
+    fontSize: vars.fontSizes.md,
     fontWeight: "bold",
-    color: theme.colors.textFocus,
+    color: vars.colors.textFocus,
   },
   banner: {
-    fontSize: theme.fontSizes.lg,
+    fontSize: vars.fontSizes.lg,
     fontWeight: "bold",
-    background: theme.colors.linearGradient,
+    background: vars.colors.linearGradient,
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
-    letterSpacing: theme.letterSpacings.tight,
+    letterSpacing: vars.letterSpacings.tight,
   },
 });
 
