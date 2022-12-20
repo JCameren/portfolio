@@ -31,8 +31,7 @@ export function Container({ size, space, ...props }) {
 export function Flex({ variant, space, ...props }) {
   return (
     <Base
-      cx={[
-        styles.list,
+      cx={[ 
         variant ? styles.flexVariants[variant] : styles.flex,
         space && styles.spacerVariants[space],
       ]}

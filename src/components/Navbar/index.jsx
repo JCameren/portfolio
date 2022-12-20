@@ -1,9 +1,9 @@
 import * as styles from "./index.css";
-import { Container, Flex, Spacer } from "../ui-library";
+import { Button, Container, Flex, Spacer } from "../ui-library";
 import { NavLink } from "./nav-ui";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ themeToggle }) => {
   const [activeTab, setActiveTab] = useState("HOME");
 
   const setHomeActive = () => {
@@ -15,6 +15,7 @@ const Navbar = () => {
   return (
     <>
       <header className={styles.desktopNavWrapper}>
+        {/* <Button onClick={themeToggle}>Change Theme</Button> */}
         <Container as="div" size="medium">
           <Flex variant="spaceBetween">
             <ul>

@@ -6,6 +6,7 @@ import { vars } from "../../styles/theme.css";
 export const container = style({
   margin: vars.positions.trueCenter,
   position: "relative",
+  // border: '1px solid white'
 });
 
 export type Containers = "large" | "medium" | "small" | "extraSmall";
@@ -67,7 +68,7 @@ export const flex = style({
   alignItems: "center",
   flexWrap: "wrap",
   width: "100%",
-  justifyContent: "space-between !important",
+  justifyContent: "space-between",
 });
 
 export type FlexVariants =
@@ -82,6 +83,8 @@ export const flexVariants: Record<FlexVariants, string> = styleVariants({
     flex,
     {
       flexDirection: "column",
+      justifyContent: 'center',
+      alignItems: "center"
     },
   ],
   spaceBetween: [
@@ -96,7 +99,10 @@ export const flexVariants: Record<FlexVariants, string> = styleVariants({
   center: [
     flex,
     {
+      display: 'flex',
+      alignitems: 'center',
       justifyContent: "center",
+      position: 'relative'
     },
   ],
   rowReverse: [
@@ -133,9 +139,6 @@ export const card = style({
   borderRadius: "0.375rem",
   padding: "1.25rem",
   transition: "all 250ms ease-in-out",
-  ":hover": {
-    backgroundColor: vars.colors.muted,
-  },
 });
 
 export const paddingVariants = styleVariants({
@@ -166,10 +169,8 @@ export const cardVariants: Record<Cards, string> = styleVariants({
     card,
     {
       border: `1px solid ${vars.colors.muted}`,
-      backgroundColor: vars.colors.foreground,
-      ":hover": {
-        background: vars.colors.foreground,
-      },
+      backgroundColor: '#1b2028',
+      backgroundImage: 'linear-gradient(135deg, rgba(#752e7c, 0.35), rgba(#734a58, 0.1) 15%, #1b2028 20%, #1b2028 100%)'
     },
   ],
   colorful: [

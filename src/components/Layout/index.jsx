@@ -1,10 +1,10 @@
 import Navbar from "../Navbar/index";
 import Footer from "../Footer/index";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, themeToggle }) => {
   return (
     <>
-      <Navbar />
+      <Navbar themeToggle={themeToggle}/>
       {children}
       <Footer />
     </>

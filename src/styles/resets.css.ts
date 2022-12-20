@@ -8,7 +8,7 @@ globalStyle("*", {
   boxSizing: "border-box",
 });
 
-globalStyle("body", {
+globalStyle("main", {
   width: "100%",
   height: "100vh",
   color: vars.colors.textSubtle,

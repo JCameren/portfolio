@@ -62,11 +62,11 @@ export const lightTheme = createTheme(colors, {
 })
 
 export const darkTheme = createTheme(colors, {
-  background: "#F3F6F9",
-  foreground: "#FFF",
-  muted: "#E0E3E7",
-  textFocus: "#0A1929",
-  textSubtle: "#3E5060",
+  background: "#010409",
+  foreground: "#161b22",
+  muted: "#21262d",
+  textFocus: "#f0f6fc",
+  textSubtle: "#8b949e",
   primary: "#007FFF",
   secondary: "#0059B2", 
   textAlt: "#fff",
