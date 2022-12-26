@@ -1,9 +1,13 @@
 import { hygraph, PATHS_REQUEST, SLUG_REQUEST } from "../../utilities/hygraph-api"
 
 const ProjectDetails = ({ post }) => {
-  const { title } = post
+  const { title, image, richText } = post
   return (
-    <div>{title}</div>
+    <>
+    <img src={image.url} alt="project banner image" />
+    <h1>{title}</h1>
+    <div dangerouslySetInnerHTML={{ __html: richText.html }}></div>
+    </>
   )
 }
 
