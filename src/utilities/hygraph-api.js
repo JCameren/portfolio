@@ -29,6 +29,8 @@ query Post($slug : String!) {
             }
             title
             slug
+            description
+            date
           }
 }
 `;

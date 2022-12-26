@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['media.hygraph.com']
-  }
+    domains: ['media.graphassets.com']
+  },
 }
 
 const {

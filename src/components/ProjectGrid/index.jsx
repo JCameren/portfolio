@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Container, Grid, Card, Heading, Text } from "../ui-library";
+import { Container, Grid, Card, Heading, Text, Spacer } from "../ui-library";
 
 const ProjectGrid = ({ posts }) => {
   // const { date, description, id, slug, title, richText, image } = posts;
@@ -7,8 +7,9 @@ const ProjectGrid = ({ posts }) => {
     <Container size="large">
       <Grid>
         {posts.map(({ id, title, description, slug }) => (
-          <Link href={`/projects/${slug}`}>
-            <Card variant="outlined" key={id}>
+          <Link href={`/projects/${slug}`} key={id}>
+            <Card variant="outlined">
+              <Spacer size="lg" />
               <Heading>{title}</Heading>
               <Text>{description}</Text>
             </Card>
