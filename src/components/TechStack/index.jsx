@@ -1,5 +1,5 @@
 import { Heading, Spacer, Card } from "../ui-library";
-import Badges from "../Badges";
+import TechBadges from "../TechBadges";
 
 const TechStack = () => {
   return (
@@ -7,7 +7,7 @@ const TechStack = () => {
       <Card variant="outlined">
         <Heading>TECHNICAL SKILLS</Heading>
         <Spacer size="sm" />
-        <Badges />
+        <TechBadges />
       </Card>
       <Spacer size="sm" />
     </>

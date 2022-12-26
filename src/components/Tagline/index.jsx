@@ -22,7 +22,7 @@ const Tagline = () => {
         on the projects I am involved in.
       </SmallText>
       <Spacer size="sm" />
-      <Button as={Link} href="/projects">View Projects <CgArrowRight /></Button>
+      <Button as={Link} href="/projects" variant="filled">View Projects <CgArrowRight /></Button>
       <Spacer size="md" />
     </>
   );

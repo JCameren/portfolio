@@ -12,7 +12,7 @@ const Navbar = () => {
               <Link href={"/"}>Logo</Link>
             </ul>
             <ul>
-              <Button variant="filled">
+              <Button>
                 Resume
               </Button>
             </ul>

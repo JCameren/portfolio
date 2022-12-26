@@ -12,7 +12,7 @@ import {
     SiPostgresql,
   } from "react-icons/si";
 
-const Badges = () => {
+const TechBadges = () => {
   return (
     <Flex variant="spaceBetween">
       <Text>
@@ -49,4 +49,4 @@ const Badges = () => {
   );
 };
 
-export default Badges;
+export default TechBadges;

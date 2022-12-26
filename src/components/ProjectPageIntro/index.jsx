@@ -15,6 +15,7 @@ const ProjectPageIntro = () => {
         exploring my work and please don't hesitate to reach out if you have any
         questions or would like to collaborate on a project.
       </SmallText>
+      <Spacer size="md" />
     </>
   );
 };

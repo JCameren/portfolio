@@ -1,9 +1,10 @@
+import { hygraph, POSTS_REQUEST, PATHS_REQUEST } from "../../utilities/hygraph-api";
 import Seo from "../../components/Seo";
 import ProjectGrid from '../../components/ProjectGrid/index'
 import ProjectPageIntro from "../../components/ProjectPageIntro";
 import { Container, BannerText } from "../../components/ui-library";
 
-const Projects = () => {
+const Projects = ({ posts }) => {
   return (
     <>
       <Seo
@@ -17,9 +18,18 @@ const Projects = () => {
         <BannerText>Projects</BannerText>
         <ProjectPageIntro />
       </Container>
-      <ProjectGrid />
+      <ProjectGrid posts={posts} />
     </>
   );
 };
 
 export default Projects;
+
+export async function getStaticProps() {
+  const { posts } = await hygraph.request(POSTS_REQUEST)
+  return {
+    props: {
+      posts
+    }
+  }
+}
