@@ -18,7 +18,7 @@ const Home = () => {
         <HeroText />
         <Tagline />
         <TechStack />
-        <ToolStack />
+        {/* <ToolStack /> */}
       </Container>
     </>
   );

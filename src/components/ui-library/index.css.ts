@@ -76,7 +76,8 @@ export type FlexVariants =
   | "spaceBetween"
   | "center"
   | "rowReverse"
-  | "columnReverse";
+  | "columnReverse"
+  | "flexEnd"
 
 export const flexVariants: Record<FlexVariants, string> = styleVariants({
   column: [
@@ -117,6 +118,12 @@ export const flexVariants: Record<FlexVariants, string> = styleVariants({
       flexDirection: "column-reverse",
     },
   ],
+  flexEnd: [
+    flex,
+    {
+      justifyContent: 'flex-end'
+    }
+  ]
 });
 
 export const grid = style({

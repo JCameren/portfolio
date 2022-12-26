@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+import { vars } from "../../styles/theme.css";
 
 export const desktopNavWrapper = style({
   position: "fixed",
@@ -11,5 +12,5 @@ export const desktopNavWrapper = style({
   display: "flex",
   alignItems: "center",
   transition: "all 250ms ease-in-out",
-  backdropFilter: "blur(15px)",
+  backgroundColor: vars.colors.background
 });

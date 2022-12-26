@@ -5,7 +5,7 @@ const TechStack = () => {
   return (
     <>
       <Card variant="outlined">
-        <Heading>TECHNICAL SKILLS</Heading>
+        <Heading>TECH STACK</Heading>
         <Spacer size="sm" />
         <TechBadges />
       </Card>
