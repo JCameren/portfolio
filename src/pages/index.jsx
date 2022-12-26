@@ -1,20 +1,25 @@
-import {
-  Button,
-  Card,
-  Container,
-  Spacer,
-  Grid,
-  BannerText,
-  Flex,
-} from "../components/ui-library";
-import AvatarCard from "../components/AvatarCard/index";
+import Tagline from '../components/Tagline/index'
+import TechStack from '../components/TechStack/index';
+import HeroText from '../components/HeroText';
+import Seo from "../components/Seo/index";
+import { Container } from "../components/ui-library";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
-      <Container size="extraSmall">
-          <AvatarCard />
+      <Seo
+        title="Home"
+        description="Software engineer and recent bootcamp graduate with a growth, failure, 
+        and evolving mindset, dedicated to continuous learning and problem-solving. Explore 
+        my portfolio to see my skills and experiences in software development."
+      />
+      <Container size="small">
+        <HeroText />
+        <Tagline />
+        <TechStack />
       </Container>
     </>
   );
 }
+
+export default Home

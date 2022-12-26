@@ -1,5 +1,11 @@
+import { Container } from "../ui-library"
+
 const Footer = () => {
-    return <footer>footer</footer>
+    return (
+        <Container size="large">
+            footer
+        </Container>
+    )
 }
 
 export default Footer

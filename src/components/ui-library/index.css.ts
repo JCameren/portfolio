@@ -68,7 +68,7 @@ export const flex = style({
   alignItems: "center",
   flexWrap: "wrap",
   width: "100%",
-  justifyContent: "space-between",
+  // justifyContent: "space-between",
 });
 
 export type FlexVariants =
@@ -209,6 +209,10 @@ export const button = style({
   letterSpacing: vars.letterSpacings.tight,
   display: "inline-flex",
   transition: "all 250ms ease-in-out",
+
+  ":hover": {
+    backgroundColor: "rgba(255, 255, 255, 0.1)"
+  }
 });
 
 export type Buttons = "colorOutline" | "filled";
@@ -245,11 +249,12 @@ export const textVariants: Record<TextVariants, string> = styleVariants({
   small: {
     fontSize: vars.fontSizes.xs,
     color: vars.colors.textSubtle,
-    fontWeight: "thin",
+    fontWeight: "100",
+    lineHeight: '1.5'
   },
   body: {
     fontSize: vars.fontSizes.sm,
-    fontWeight: "thin",
+    fontWeight: "100",
     color: vars.colors.textSubtle,
   },
   heading: {
@@ -259,11 +264,11 @@ export const textVariants: Record<TextVariants, string> = styleVariants({
   },
   banner: {
     fontSize: vars.fontSizes.lg,
-    fontWeight: "bold",
-    background: vars.colors.linearGradient,
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
+    fontWeight: "100",
+    // fontStyle: 'italic',
+    color: vars.colors.textFocus,
     letterSpacing: vars.letterSpacings.tight,
+
   },
 });
 

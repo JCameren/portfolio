@@ -1,5 +1,4 @@
 import { createGlobalTheme, createThemeContract, createTheme } from "@vanilla-extract/css";
-// import { colors } from "./colors.css";
 
 const letterSpacings = {
   normal: "0",
@@ -52,7 +51,7 @@ export const lightTheme = createTheme(colors, {
   background: "#F3F6F9",
   foreground: "#FFF",
   muted: "#E0E3E7",
-  textFocus: "#0A1929",
+  textFocus: "#fff",
   textSubtle: "#3E5060",
   primary: "#007FFF",
   secondary: "#0059B2", 
@@ -67,9 +66,9 @@ export const darkTheme = createTheme(colors, {
   muted: "#21262d",
   textFocus: "#f0f6fc",
   textSubtle: "#8b949e",
-  primary: "#007FFF",
-  secondary: "#0059B2", 
-  textAlt: "#fff",
+  primary: "#fff",
+  secondary: "#efefef", 
+  textAlt: "#010409",
   linearGradient: "linear-gradient(to right bottom, #007FFF, #0059B2 120%)",
   hoverSubtleBlue: "#C2E0FF"
 })
