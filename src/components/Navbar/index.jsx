@@ -9,12 +9,12 @@ const Navbar = () => {
         <Container as="div" size="large">
           <Flex variant="spaceBetween">
             <ul>
-              <Link href={"/"}>
-                Logo
-              </Link>
+              <Link href={"/"}>Logo</Link>
             </ul>
             <ul>
-              <Button>Resume</Button>
+              <Button variant="filled">
+                Resume
+              </Button>
             </ul>
           </Flex>
         </Container>

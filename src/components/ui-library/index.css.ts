@@ -122,13 +122,13 @@ export const flexVariants: Record<FlexVariants, string> = styleVariants({
 export const grid = style({
   display: "grid",
   alignItems: "center",
-  gridTemplateColumns: "1fr 1fr 1fr",
+  gridTemplateColumns: "1fr 1fr",
   gap: "1rem",
   "@media": {
     "screen and (max-width: 800px)": {
       gridTemplateColumns: "1fr 1fr",
     },
-    "screen and (max-width: 600px)": {
+    "screen and (max-width: 480px)": {
       gridTemplateColumns: "1fr",
     },
   },
@@ -208,6 +208,8 @@ export const button = style({
   border: `1px solid ${vars.colors.muted}`,
   letterSpacing: vars.letterSpacings.tight,
   display: "inline-flex",
+  alignItems: 'center',
+  columnGap: '0.375rem',
   transition: "all 250ms ease-in-out",
 
   ":hover": {

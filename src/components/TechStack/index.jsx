@@ -1,12 +1,15 @@
-import { Flex, Heading, Spacer } from "../ui-library";
+import { Heading, Spacer, Card } from "../ui-library";
 import Badges from "../Badges";
 
 const TechStack = () => {
   return (
     <>
-      <Heading>TECH STACK</Heading>
+      <Card variant="outlined">
+        <Heading>TECHNICAL SKILLS</Heading>
+        <Spacer size="sm" />
+        <Badges />
+      </Card>
       <Spacer size="sm" />
-      <Badges />
     </>
   );
 };

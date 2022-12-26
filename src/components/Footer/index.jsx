@@ -1,10 +1,13 @@
-import { Container } from "../ui-library"
+import { Container, Spacer } from "../ui-library"
 
 const Footer = () => {
     return (
+        <>
+        <Spacer size="lg" />
         <Container size="large">
             footer
         </Container>
+        </>
     )
 }
 
