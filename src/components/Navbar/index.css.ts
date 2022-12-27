@@ -3,7 +3,7 @@ import { vars } from "../../styles/theme.css";
 
 export const desktopNavWrapper = style({
   position: "fixed",
-  padding: "clamp(1.15rem, 2vw, 1.6rem)",
+  padding: "18px",
   left: 0,
   zIndex: 99,
   width: "100%",

@@ -26,7 +26,7 @@ const Navbar = () => {
               Logo
             </Link>
             <button className={styles.navBtnWrapper} onClick={toggleNavState}>
-            <AiOutlineMenu />
+              <AiOutlineMenu />
             </button>
           </Flex>
         </Container>
@@ -53,10 +53,9 @@ const Navbar = () => {
                 <Text>Projects</Text>
               </Link>
               <Spacer size="sm" />
-              <Button variant="wide">Resume</Button>
+              <Button>Resume</Button>
               <Spacer size="sm" />
               <Button
-                variant="wide"
                 as="a"
                 href="https://www.github.com/JCameren"
                 target="_blank"
@@ -67,7 +66,6 @@ const Navbar = () => {
               </Button>
               <Spacer size="sm" />
               <Button
-                variant="wide"
                 href="https://www.linkedin.com/in/camerenj/"
                 target="_blank"
                 referrerPolicy="no-referrer"

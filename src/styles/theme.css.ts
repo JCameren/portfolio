@@ -6,7 +6,7 @@ import {
 
 const letterSpacings = {
   normal: "0",
-  tight: "-0.02em",
+  tight: "-0.05em",
   wide: "0.08em",
 };
 

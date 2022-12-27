@@ -13,7 +13,7 @@ const ProjectPageIntro = () => {
         technologies and techniques used, any notable achievements or
         milestones, and any relevant links or resources. I hope you enjoy
         exploring my work and please don't hesitate to reach out if you have any
-        questions or would like to collaborate on a project.
+        questions.
       </Text>
       <Spacer size="md" />
     </>
