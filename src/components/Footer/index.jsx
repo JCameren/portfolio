@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <>
       <Spacer size="lg" />
-      <Container size="large" as="footer">
+      <Container size="large" as="footer" space={null}>
         <Grid>
           <Card>
             <Heading>

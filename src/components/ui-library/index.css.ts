@@ -224,7 +224,7 @@ export const button = style({
   }
 });
 
-export type Buttons = "colorOutline" | "filled";
+export type Buttons = "colorOutline" | "filled" | "wide";
 
 export const buttonVariants: Record<Buttons, string> = styleVariants({
   colorOutline: [
@@ -249,6 +249,14 @@ export const buttonVariants: Record<Buttons, string> = styleVariants({
       },
     },
   ],
+  wide: [
+    button,
+    {
+      width: 'calc(100% - 25%)',
+      justifyContent: 'center'
+      
+    }
+  ]
 });
 
 // typography styles
