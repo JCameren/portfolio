@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import {
   Container,
   Flex,
@@ -6,22 +5,14 @@ import {
   Spacer,
   Button,
 } from "../ui-library/index";
-import { MdArrowBackIos } from "react-icons/md";
+import * as styles from './index.css'
 
 const ProjectDetailHeader = ({ title }) => {
-  const router = useRouter();
-  const goBack = () => {
-    router.back();
-  };
   return (
     <>
       <Container size="large" as="header">
-        <Flex variant="spaceBetween">
-          <BannerText>{title}</BannerText>
-          <Button onClick={goBack}>
-            <MdArrowBackIos />
-            Back
-          </Button>
+        <Flex variant="center">
+          <BannerText className={styles.projectHeaderWrapper}>{title}</BannerText>
         </Flex>
       </Container>
       <Spacer size="md" />

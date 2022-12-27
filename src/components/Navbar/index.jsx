@@ -1,12 +1,5 @@
 import Link from "next/link";
-import {
-  Button,
-  Container,
-  Flex,
-  Spacer,
-  Heading,
-  Text,
-} from "../ui-library";
+import { Button, Container, Flex, Spacer, Heading, Text } from "../ui-library";
 import Overlay from "../Overlay";
 import { AiOutlineMenu } from "react-icons/ai";
 import { TfiClose } from "react-icons/tfi";
@@ -20,25 +13,21 @@ const Navbar = () => {
   };
   const makeNavStateFalse = () => {
     if (sideNavActive) {
-      toggleNavState()
-    } else return
-  }
+      toggleNavState();
+    } else return;
+  };
   return (
     <>
       <header className={styles.desktopNavWrapper}>
         <Container as="div" size="large">
           <Flex variant="spaceBetween">
-            <ul>
-              <Link href={"/"} onClick={makeNavStateFalse}>
-                Logo
-              </Link>
-            </ul>
-            <ul>
-              <AiOutlineMenu
-                className={styles.sideNavBtnWrapper}
-                onClick={toggleNavState}
-              />
-            </ul>
+            <Link href={"/"} onClick={makeNavStateFalse}>
+              Logo
+            </Link>
+            <AiOutlineMenu
+              className={styles.sideNavBtnWrapper}
+              onClick={toggleNavState}
+            />
           </Flex>
         </Container>
       </header>
@@ -61,7 +50,7 @@ const Navbar = () => {
               </Link>
               <Spacer size="sm" />
               <Link href={"/projects"} onClick={toggleNavState}>
-                <Text>projects</Text>
+                <Text>Projects</Text>
               </Link>
               <Spacer size="sm" />
               <Button>Resume</Button>

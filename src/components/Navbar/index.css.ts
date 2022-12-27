@@ -25,8 +25,14 @@ export const sideMenu = style({
   borderRadius: '10px',
   transform: 'translate(-10px)',
   backgroundColor: vars.colors.background,
-  border: `thin solid ${vars.colors.muted}`
+  border: `thin solid ${vars.colors.muted}`,
 
+    '@media': {
+      'screen and (max-width: 425px)': {
+        width: 'calc(100% - 20px)',
+        height: 'calc(100% - 20px)'
+      }
+    }
 })
 
 export const sideMenuHeader = style({
