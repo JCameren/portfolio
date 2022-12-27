@@ -1,6 +1,4 @@
-import Link from "next/link";
-import { SmallText, Spacer, Button } from "../ui-library/index";
-import { CgArrowRight } from 'react-icons/cg'
+import { SmallText, Spacer } from "../ui-library/index";
 
 const Tagline = () => {
   return (
@@ -22,8 +20,6 @@ const Tagline = () => {
         on the projects I am involved in.
       </SmallText>
       <Spacer size="sm" />
-      {/* <Button as={Link} href="/projects" variant="filled">View Projects <CgArrowRight /></Button>
-      <Spacer size="md" /> */}
     </>
   );
 };

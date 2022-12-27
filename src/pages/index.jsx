@@ -1,6 +1,5 @@
 import Tagline from '../components/Tagline/index'
 import TechStack from '../components/TechStack/index';
-import ToolStack from '../components/ToolStack';
 import HeroText from '../components/HeroText';
 import Seo from "../components/Seo/index";
 import { Container } from "../components/ui-library";
@@ -18,7 +17,6 @@ const Home = () => {
         <HeroText />
         <Tagline />
         <TechStack />
-        {/* <ToolStack /> */}
       </Container>
     </>
   );

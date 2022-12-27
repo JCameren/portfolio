@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Container, Grid, Card, Heading, Text, Spacer } from "../ui-library";
 
 const ProjectGrid = ({ posts }) => {
-  // const { date, description, id, slug, title, richText, image } = posts;
   return (
     <Container size="large">
       <Grid>

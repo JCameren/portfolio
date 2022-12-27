@@ -5,7 +5,6 @@ import {
   Flex,
   Spacer,
   Heading,
-  Card,
   Text,
 } from "../ui-library";
 import Overlay from "../Overlay";
