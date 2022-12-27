@@ -2,7 +2,7 @@ import Layout from "../components/Layout/index";
 import { darkTheme } from "../styles/theme.css";
 import "../styles/resets.css";
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
     <main className={darkTheme}>
       <Layout>
@@ -11,3 +11,5 @@ export default function App({ Component, pageProps }) {
     </main>
   );
 }
+
+export default App

@@ -25,10 +25,9 @@ const Navbar = () => {
             <Link href={"/"} onClick={makeNavStateFalse}>
               Logo
             </Link>
-            <AiOutlineMenu
-              className={styles.sideNavBtnWrapper}
-              onClick={toggleNavState}
-            />
+            <button className={styles.navBtnWrapper} onClick={toggleNavState}>
+            <AiOutlineMenu />
+            </button>
           </Flex>
         </Container>
       </header>

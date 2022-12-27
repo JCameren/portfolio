@@ -11,7 +11,8 @@ const letterSpacings = {
 };
 
 const fonts = {
-  text: '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;',
+  text: '"IBM Plex Mono", monospace',
+  head: 'Share Tech Mono, monospace'
 };
 
 const fontSizes = {

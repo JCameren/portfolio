@@ -3,7 +3,7 @@ import { BannerText, Spacer } from "../ui-library";
 const HeroText = () => {
   return (
     <>
-      <BannerText>Hello</BannerText>
+      <BannerText>Ola</BannerText>
       <Spacer size="sm" />
     </>
   );

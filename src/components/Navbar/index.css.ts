@@ -3,7 +3,7 @@ import { vars } from "../../styles/theme.css";
 
 export const desktopNavWrapper = style({
   position: "fixed",
-  padding: "clamp(1.15rem, 2vw, 1rem)",
+  padding: "clamp(1.15rem, 2vw, 1.6rem)",
   left: 0,
   zIndex: 99,
   width: "100%",
@@ -12,9 +12,23 @@ export const desktopNavWrapper = style({
   display: "flex",
   alignItems: "center",
   transition: "all 250ms ease-in-out",
-  backgroundColor: vars.colors.foreground,
-  boxShadow: vars.shadows.subtleElevated
+  backgroundColor: 'rgba(0, 0, 0, 0.45)',
+  backdropFilter: 'blur(10px)',
+  borderBottom: `thin solid ${vars.colors.muted}`
 });
+
+export const navBtnWrapper = style({
+  all: 'unset',
+  border: `thin solid ${vars.colors.muted}`,
+  borderRadius: '10px',
+  padding: '0.5rem',
+  color: vars.colors.textSubtle,
+  fontSize: vars.fontSizes.md,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: vars.colors.background
+})
 
 export const sideMenu = style({
   position: 'absolute',
