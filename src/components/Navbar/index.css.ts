@@ -12,7 +12,8 @@ export const desktopNavWrapper = style({
   display: "flex",
   alignItems: "center",
   transition: "all 250ms ease-in-out",
-  backgroundColor: vars.colors.background
+  backgroundColor: vars.colors.foreground,
+  boxShadow: vars.shadows.subtleElevated
 });
 
 export const sideMenu = style({

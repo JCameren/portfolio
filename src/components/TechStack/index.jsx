@@ -4,7 +4,7 @@ import TechBadges from "../TechBadges";
 const TechStack = () => {
   return (
     <>
-      <Card variant="filled">
+      <Card variant="outlined">
         <Heading>TECH STACK</Heading>
         <Spacer size="sm" />
         <TechBadges />
