@@ -281,8 +281,7 @@ export const textVariants: Record<TextVariants, string> = styleVariants({
   },
   banner: {
     fontSize: vars.fontSizes.lg,
-    fontWeight: "100",
-    // fontStyle: 'italic',
+    fontWeight: "bold",
     color: vars.colors.textFocus,
     letterSpacing: vars.letterSpacings.tight,
 

@@ -15,16 +15,12 @@ const Footer = () => {
     <>
       <Spacer size="lg" />
       <Container size="large" as="footer" space={null}>
-        <Grid>
+        <Flex variant="spaceBetween">
+            <SmallText>
+            &copy; 20222 Cameren Johnson
+            </SmallText>
           <Card>
-            <Heading>
-              Thanks for stopping by! If you have any questions or want to chat
-              about potential opportunities, don't be a stranger - shoot me a
-              message.
-            </Heading>
-          </Card>
-          <Card>
-            <Flex variant="flexEnd">
+            <Flex>
               <a
                 href="https://github.com/JCameren"
                 target="_blank"
@@ -46,7 +42,7 @@ const Footer = () => {
               </a>
             </Flex>
           </Card>
-        </Grid>
+        </Flex>
       </Container>
     </>
   );

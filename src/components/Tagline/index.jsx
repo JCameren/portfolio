@@ -1,9 +1,9 @@
-import { SmallText, Spacer } from "../ui-library/index";
+import { Text, Spacer } from "../ui-library/index";
 
 const Tagline = () => {
   return (
     <>
-      <SmallText>
+      <Text>
         As a recent graduate of a software engineering bootcamp, I am excited to
         bring my passion for problem-solving and my dedication to continuous
         learning to the field of software development. With a growth, failure,
@@ -18,7 +18,7 @@ const Tagline = () => {
         abilities as a software engineer. I look forward to the opportunity to
         contribute my skills and expertise to a team and make a positive impact
         on the projects I am involved in.
-      </SmallText>
+      </Text>
       <Spacer size="sm" />
     </>
   );

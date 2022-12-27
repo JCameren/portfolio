@@ -1,4 +1,8 @@
-import { createGlobalTheme, createThemeContract, createTheme } from "@vanilla-extract/css";
+import {
+  createGlobalTheme,
+  createThemeContract,
+  createTheme,
+} from "@vanilla-extract/css";
 
 const letterSpacings = {
   normal: "0",
@@ -7,7 +11,7 @@ const letterSpacings = {
 };
 
 const fonts = {
-  text: '"Consolas", monospace',
+  text: '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;',
 };
 
 const fontSizes = {
@@ -31,21 +35,21 @@ const sizes = {
 };
 
 const positions = {
-  trueCenter: '0 auto'
-}
+  trueCenter: "0 auto",
+};
 
 const colors = createThemeContract({
   background: null,
-    foreground: null,
-    muted: null,
-    textFocus: null,
-    textSubtle: null,
-    primary: null,
-    secondary: null, 
-    textAlt: null,
-    linearGradient: null,
-    hoverSubtleBlue: null
-})
+  foreground: null,
+  muted: null,
+  textFocus: null,
+  textSubtle: null,
+  primary: null,
+  secondary: null,
+  textAlt: null,
+  linearGradient: null,
+  hoverSubtleBlue: null,
+});
 
 export const lightTheme = createTheme(colors, {
   background: "#F3F6F9",
@@ -54,11 +58,11 @@ export const lightTheme = createTheme(colors, {
   textFocus: "#fff",
   textSubtle: "#3E5060",
   primary: "#007FFF",
-  secondary: "#0059B2", 
+  secondary: "#0059B2",
   textAlt: "#fff",
   linearGradient: "linear-gradient(to right bottom, #007FFF, #0059B2 120%)",
-  hoverSubtleBlue: "#C2E0FF"
-})
+  hoverSubtleBlue: "#C2E0FF",
+});
 
 export const darkTheme = createTheme(colors, {
   background: "#010409",
@@ -67,11 +71,11 @@ export const darkTheme = createTheme(colors, {
   textFocus: "#f0f6fc",
   textSubtle: "#8b949e",
   primary: "#fff",
-  secondary: "#efefef", 
+  secondary: "#efefef",
   textAlt: "#010409",
   linearGradient: "linear-gradient(to right bottom, #007FFF, #0059B2 120%)",
-  hoverSubtleBlue: "#C2E0FF"
-})
+  hoverSubtleBlue: "#C2E0FF",
+});
 
 export const root = createGlobalTheme(":root", {
   letterSpacings,
@@ -82,4 +86,4 @@ export const root = createGlobalTheme(":root", {
   positions,
 });
 
-export const vars = {...root, colors}
+export const vars = { ...root, colors };
