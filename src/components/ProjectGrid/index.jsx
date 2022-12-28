@@ -1,14 +1,21 @@
 import Link from "next/link";
-import { Container, Grid, Card, Heading, Text, Spacer } from "../ui-library";
+import { BsCalendar4 } from 'react-icons/bs'
+import { Container, Grid, Card, Heading, Text, Spacer, Flex } from "../ui-library";
 
 const ProjectGrid = ({ posts }) => {
   return (
     <Container size="large">
       <Grid>
-        {posts.map(({ id, title, description, slug }) => (
+        {posts.map(({ id, title, description, slug, date }) => (
           <Link href={`/projects/${slug}`} key={id}>
             <Card variant="outlined">
-              <Spacer size="lg" />
+              <Flex variant="spaceBetween">
+              <Text>
+                <BsCalendar4 />
+              </Text>
+              <Text>{date}</Text>
+              </Flex>
+              <Spacer size="md" />
               <Heading>{title}</Heading>
               <Text>{description}</Text>
             </Card>

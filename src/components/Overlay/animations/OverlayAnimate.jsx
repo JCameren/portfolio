@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import * as styles from '../index.css'
 
-export const OverlayAnimate = ({ children }) => {
+export const OverlayAnimate = ({ children, toggleNavState }) => {
     return (
       <motion.div
       initial={{ opacity: 0 }}
@@ -9,6 +9,7 @@ export const OverlayAnimate = ({ children }) => {
       exit={{ opacity: 0 }}
       transition={{ ease: "easeInOut", duration: 0.9 }}
       className={styles.overlay}
+      onClick={toggleNavState}
       >
         {children}
       </motion.div>

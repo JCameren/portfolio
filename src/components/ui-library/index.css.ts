@@ -129,9 +129,12 @@ export const flexVariants: Record<FlexVariants, string> = styleVariants({
 export const grid = style({
   display: "grid",
   alignItems: "center",
-  gridTemplateColumns: "1fr 1fr",
+  gridTemplateColumns: "1fr 1fr 1fr",
   gap: "1rem",
   "@media": {
+    "screen and (max-width: 900px)": {
+      gridTemplateColumns: "1fr 1fr"
+    },
     "screen and (max-width: 700px)": {
       gridTemplateColumns: "1fr",
     },

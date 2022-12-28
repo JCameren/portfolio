@@ -35,8 +35,8 @@ const Navbar = () => {
       </header>
       {sideNavActive && (
         <>
-          <OverlayAnimate>
-            <Overlay toggleNavState={toggleNavState} />
+          <OverlayAnimate toggleNavState={toggleNavState}>
+            <Overlay />
           </OverlayAnimate>
           <SideNavAnimate>
             <header className={styles.sideMenuHeader}>
@@ -56,10 +56,10 @@ const Navbar = () => {
               <Link href={"/projects"} onClick={toggleNavState}>
                 <Text>Projects</Text>
               </Link>
-              <Spacer size="sm" />
+              {/* <Spacer size="sm" />
               <Button>Resume</Button>
-              <Spacer size="sm" />
-              <Button
+              <Spacer size="sm" /> */}
+              {/* <Button
                 as="a"
                 href="https://www.github.com/JCameren"
                 target="_blank"
@@ -76,7 +76,7 @@ const Navbar = () => {
               >
                 <SiLinkedin />
                 LinkedIn
-              </Button>
+              </Button> */}
             </section>
           </SideNavAnimate>
         </>

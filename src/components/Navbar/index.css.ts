@@ -35,7 +35,7 @@ export const sideMenu = style({
   right: '10px',
   zIndex: '100',
   width: '420px',
-  height: 'calc(100% - 20%)',
+  height: '25%',
   borderRadius: '10px',
   transform: 'translate(-10px)',
   backgroundColor: vars.colors.background,
