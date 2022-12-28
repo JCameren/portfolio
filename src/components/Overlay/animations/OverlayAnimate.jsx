@@ -7,7 +7,7 @@ export const OverlayAnimate = ({ children }) => {
       initial={{ opacity: 0 }}
       animate={{opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ ease: "easeInOut", duration: 1.25 }}
+      transition={{ ease: "easeInOut", duration: 0.9 }}
       className={styles.overlay}
       >
         {children}
