@@ -3,11 +3,11 @@ import {
   POSTS_REQUEST,
   PATHS_REQUEST,
 } from "../../utilities/hygraph-api";
-import { AnimatePresence, motion } from "framer-motion";
 import Seo from "../../components/Seo";
 import ProjectGrid from "../../components/ProjectGrid/index";
 import ProjectPageIntro from "../../components/ProjectPageIntro";
 import { Container, BannerText } from "../../components/ui-library";
+import TransitionUp from "../../components/animations/TransitionUp";
 
 const Projects = ({ posts }) => {
   return (
@@ -19,18 +19,13 @@ const Projects = ({ posts }) => {
         Learn about the technologies and techniques used, any notable achievements 
         or milestones, and relevant links and resources for each project."
       />
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ delay: 1, ease: 'easeInOut', duration: 1.25 }}
-        >
-          <Container size="small">
-            <BannerText>Projects</BannerText>
-            <ProjectPageIntro />
-          </Container>
-          <ProjectGrid posts={posts} />
-        </motion.section>
+      <TransitionUp>
+        <Container size="small">
+          <BannerText>Projects</BannerText>
+          <ProjectPageIntro />
+        </Container>
+        <ProjectGrid posts={posts} />
+      </TransitionUp>
     </>
   );
 };

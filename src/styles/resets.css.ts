@@ -13,7 +13,7 @@ globalStyle("main", {
   height: "100vh",
   color: vars.colors.textSubtle,
   backgroundColor: vars.colors.background,
-  fontFamily: vars.fonts.text,
+  fontFamily: vars.fonts.textFont,
   fontSize: vars.fontSizes.sm,
   fontWeight: "bold",
   letterSpacing: vars.letterSpacings.tight,

@@ -3,6 +3,7 @@ import {
   createThemeContract,
   createTheme,
 } from "@vanilla-extract/css";
+// import * as fonts from './fonts.css'
 
 const letterSpacings = {
   normal: "0",
@@ -10,17 +11,18 @@ const letterSpacings = {
   wide: "0.08em",
 };
 
-const fonts = {
-  text: '"IBM Plex Mono", monospace',
-  head: 'Share Tech Mono, monospace'
-};
-
 const fontSizes = {
-  lg: "clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem);",
+  lg: "clamp(2.625rem, 1.2857rem + 3.5714vw, 5.8rem);",
   md: "clamp(1.5, 5vw, 1.75rem)",
   sm: "clamp(0.9rem, 3vw, 1rem)",
   xs: "clamp(0.75rem, 2vw, 0.8rem)",
 };
+
+const fonts = {
+  textFont: 'DM Mono',
+  headFont: 'DM Mono',
+  boldFont: 'DM Mono'
+}
 
 const shadows = {
   subtleElevated:
@@ -53,7 +55,7 @@ const colors = createThemeContract({
 });
 
 export const lightTheme = createTheme(colors, {
-  background: "#F3F6F9",
+  background: "#1B2631",
   foreground: "#FFF",
   muted: "#E0E3E7",
   textFocus: "#fff",

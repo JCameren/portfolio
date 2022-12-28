@@ -1,9 +1,10 @@
-import { BannerText, Spacer } from "../ui-library";
+import { BannerText, Spacer, Text } from "../ui-library";
 
 const HeroText = () => {
   return (
     <>
-      <BannerText>¡Ola!</BannerText>
+      <Spacer size="sm" />
+      <BannerText>Simplicity is key.</BannerText>
       <Spacer size="sm" />
     </>
   );

@@ -132,10 +132,7 @@ export const grid = style({
   gridTemplateColumns: "1fr 1fr",
   gap: "1rem",
   "@media": {
-    "screen and (max-width: 800px)": {
-      gridTemplateColumns: "1fr 1fr",
-    },
-    "screen and (max-width: 480px)": {
+    "screen and (max-width: 700px)": {
       gridTemplateColumns: "1fr",
     },
   },
@@ -210,7 +207,7 @@ export const button = style({
   all: "unset",
   borderRadius: "0.375rem",
   fontSize: vars.fontSizes.md,
-  fontFamily: vars.fonts.text,
+  fontFamily: vars.fonts.textFont,
   padding: "1rem 3rem",
   border: `1px solid ${vars.colors.muted}`,
   letterSpacing: vars.letterSpacings.tight,
@@ -271,20 +268,20 @@ export const textVariants: Record<TextVariants, string> = styleVariants({
   },
   body: {
     fontSize: vars.fontSizes.sm,
-    fontWeight: "400",
-    fontStyle: 'italic',
+    fontWeight: "300",
+    // fontStyle: 'italic',
     color: vars.colors.textSubtle,
   },
   heading: {
     fontSize: vars.fontSizes.md,
-    fontFamily: vars.fonts.head,
-    fontWeight: "bold",
+    fontFamily: vars.fonts.headFont,
+    fontWeight: "400",
     color: vars.colors.textFocus,
   },
   banner: {
     fontSize: vars.fontSizes.lg,
-    fontFamily: vars.fonts.head,
-    fontWeight: "bold",
+    fontFamily: vars.fonts.boldFont,
+    fontWeight: "500",
     color: vars.colors.textFocus,
     letterSpacing: vars.letterSpacings.tight,
 

@@ -8,5 +8,5 @@ export const overlay = style({
     height: '100vh',
     backgroundColor: 'rgba(0, 0, 0, 0.25)',
     zIndex: '99',
-    backdropFilter: 'blur(10px)'
+    backdropFilter: 'blur(5px)'
 })

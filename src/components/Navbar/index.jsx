@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SideNavAnimate } from "./animations/SideNavAnimate";
 import { Button, Container, Flex, Spacer, Heading, Text } from "../ui-library";
 import Overlay from "../Overlay";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -6,6 +7,7 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 import { TfiClose } from "react-icons/tfi";
 import { useState } from "react";
 import * as styles from "./index.css";
+import { OverlayAnimate } from "../Overlay/animations/OverlayAnimate";
 
 const Navbar = () => {
   const [sideNavActive, setSideNavActive] = useState(false);
@@ -33,8 +35,10 @@ const Navbar = () => {
       </header>
       {sideNavActive && (
         <>
-          <Overlay toggleNavState={toggleNavState} />
-          <div className={styles.sideMenu}>
+          <OverlayAnimate>
+            <Overlay toggleNavState={toggleNavState} />
+          </OverlayAnimate>
+          <SideNavAnimate>
             <header className={styles.sideMenuHeader}>
               <Flex variant="spaceBetween">
                 <Heading>Navigate</Heading>
@@ -74,7 +78,7 @@ const Navbar = () => {
                 LinkedIn
               </Button>
             </section>
-          </div>
+          </SideNavAnimate>
         </>
       )}
       <Spacer size="lg" />

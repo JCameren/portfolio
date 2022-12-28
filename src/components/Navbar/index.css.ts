@@ -3,7 +3,7 @@ import { vars } from "../../styles/theme.css";
 
 export const desktopNavWrapper = style({
   position: "fixed",
-  padding: "18px",
+  padding: "15px",
   left: 0,
   zIndex: 99,
   width: "100%",
@@ -12,8 +12,7 @@ export const desktopNavWrapper = style({
   display: "flex",
   alignItems: "center",
   transition: "all 250ms ease-in-out",
-  backgroundColor: 'rgba(0, 0, 0, 0.45)',
-  backdropFilter: 'blur(10px)',
+  backgroundColor: vars.colors.background,
   borderBottom: `thin solid ${vars.colors.muted}`
 });
 
@@ -33,7 +32,7 @@ export const navBtnWrapper = style({
 export const sideMenu = style({
   position: 'absolute',
   top: '10px',
-  right: '0',
+  right: '10px',
   zIndex: '100',
   width: '420px',
   height: 'calc(100% - 20%)',
