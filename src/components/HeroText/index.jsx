@@ -4,7 +4,7 @@ const HeroText = () => {
   return (
     <>
       <Spacer size="sm" />
-      <BannerText>Simplicity is key.</BannerText>
+      <BannerText>衝撃</BannerText>
       <Spacer size="sm" />
     </>
   );

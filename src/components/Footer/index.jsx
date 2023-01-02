@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className={styles.footerWrapper}>
         <Container size="large" as="div">
           <Flex variant="spaceBetween">
-            <SmallText>&copy; 20222 Cameren Johnson</SmallText>
+            <SmallText>&copy; 2022 Cameren Johnson</SmallText>
             <Card>
               <Flex>
                 <a

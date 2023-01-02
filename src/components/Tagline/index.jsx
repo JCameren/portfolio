@@ -1,20 +1,22 @@
-import { Text, Grid } from "../ui-library/index";
+import { Text, Grid, SmallText, Flex, Spacer } from "../ui-library/index";
 
 const Tagline = () => {
   return (
-    <Grid>
-      <Text>
-        As a recent graduate of a software engineering bootcamp, I am eager to
-        apply my skills and knowledge to a real-world setting. I am confident in
-        my ability to learn quickly and contribute value as a member of a
-        software development team.
-      </Text>
-      <Text>
-        I am drawn to a minimalist approach to web design that prioritizes
-        function over form. I also enjoy breaking down complex problems into
-        their core elements and tackling them one step at a time.
-      </Text>
-    </Grid>
+    <>
+      <Flex>
+        <SmallText>ABOUT:</SmallText>
+        <Spacer size="xs" />
+        <Text>
+          Hey there! I'm Cameren, a recent graduate of a software engineering
+          bootcamp with a focus in full stack web development. I believe in the
+          power of minimalism in web design and enjoy the process of breaking
+          down tough challenges into manageable pieces. When it comes to user
+          experience, I strive to create websites that are visually striking and
+          leave a lasting impression.
+        </Text>
+      </Flex>
+      <Spacer size="md" />
+    </>
   );
 };
 

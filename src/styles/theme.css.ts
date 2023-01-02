@@ -12,16 +12,16 @@ const letterSpacings = {
 };
 
 const fontSizes = {
-  lg: "clamp(2.625rem, 1.2857rem + 3.5714vw, 5.8rem);",
+  lg: "clamp(2.625rem, 1.2857rem + 3.5714vw, 2.8rem);",
   md: "clamp(1.5, 5vw, 1.75rem)",
   sm: "clamp(0.9rem, 3vw, 1rem)",
-  xs: "clamp(0.75rem, 2vw, 0.8rem)",
+  xs: "12px",
 };
 
 const fonts = {
-  textFont: 'DM Mono',
-  headFont: 'DM Mono',
-  boldFont: 'DM Mono'
+  textFont: 'monospace',
+  headFont: 'monospace',
+  boldFont: 'monospace'
 }
 
 const shadows = {
@@ -33,7 +33,7 @@ const shadows = {
 const sizes = {
   lgContainer: "80%",
   mdContainer: "60%",
-  smContainer: "50%",
+  smContainer: "40%",
   xsContainer: "max-content",
 };
 
@@ -68,7 +68,7 @@ export const lightTheme = createTheme(colors, {
 });
 
 export const darkTheme = createTheme(colors, {
-  background: "#010409",
+  background: "#16191b",
   foreground: "#161b22",
   muted: "#21262d",
   textFocus: "#f0f6fc",

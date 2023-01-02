@@ -1,10 +1,11 @@
 import Navbar from "../Navbar/index";
 import Footer from "../Footer/index";
+import { darkTheme } from "../../styles/theme.css";
 
-const Layout = ({ children, themeToggle }) => {
+const Layout = ({ children }) => {
   return (
     <>
-      <Navbar themeToggle={themeToggle}/>
+      <Navbar />
       {children}
       <Footer />
     </>

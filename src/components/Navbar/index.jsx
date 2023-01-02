@@ -25,15 +25,13 @@ const Navbar = () => {
         <Container as="div" size="large">
           <Flex variant="spaceBetween">
             <Link href={"/"} onClick={makeNavStateFalse}>
-              Logo
+              cj
             </Link>
-            <button className={styles.navBtnWrapper} onClick={toggleNavState}>
-              <AiOutlineMenu />
-            </button>
+            <Button variant="filled">Resume</Button>
           </Flex>
         </Container>
       </header>
-      {sideNavActive && (
+      {/* {sideNavActive && (
         <>
           <OverlayAnimate toggleNavState={toggleNavState}>
             <Overlay />
@@ -56,31 +54,10 @@ const Navbar = () => {
               <Link href={"/projects"} onClick={toggleNavState}>
                 <Text>Projects</Text>
               </Link>
-              {/* <Spacer size="sm" />
-              <Button>Resume</Button>
-              <Spacer size="sm" /> */}
-              {/* <Button
-                as="a"
-                href="https://www.github.com/JCameren"
-                target="_blank"
-                referrerPolicy="no-referrer"
-              >
-                <SiGithub />
-                Github
-              </Button>
-              <Spacer size="sm" />
-              <Button
-                href="https://www.linkedin.com/in/camerenj/"
-                target="_blank"
-                referrerPolicy="no-referrer"
-              >
-                <SiLinkedin />
-                LinkedIn
-              </Button> */}
             </section>
           </SideNavAnimate>
         </>
-      )}
+      )} */}
       <Spacer size="lg" />
     </>
   );

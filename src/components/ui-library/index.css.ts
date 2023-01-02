@@ -65,10 +65,16 @@ export const containerVariants: Record<Containers, string> = styleVariants({
 // flex styles & utility classes
 export const flex = style({
   display: "flex",
-  alignItems: "center",
-  flexWrap: "wrap",
+  alignItems: "flex-start",
+  flexWrap: "nowrap",
   width: "100%",
   // justifyContent: "space-between",
+
+  '@media': {
+    'screen and (max-width: 480px)': {
+      flexWrap: "wrap"
+    }
+  }
 });
 
 export type FlexVariants =
@@ -131,6 +137,8 @@ export const grid = style({
   alignItems: "center",
   gridTemplateColumns: "1fr 1fr 1fr",
   gap: "1rem",
+
+
   "@media": {
     "screen and (max-width: 900px)": {
       gridTemplateColumns: "1fr 1fr"
@@ -265,26 +273,28 @@ export type TextVariants = "small" | "body" | "heading" | "banner";
 export const textVariants: Record<TextVariants, string> = styleVariants({
   small: {
     fontSize: vars.fontSizes.xs,
-    color: vars.colors.textSubtle,
+    color: vars.colors.textFocus,
+    opacity: '.2',
     fontWeight: "100",
     lineHeight: '1.5'
   },
   body: {
     fontSize: vars.fontSizes.sm,
-    fontWeight: "300",
+    fontWeight: "100",
     // fontStyle: 'italic',
-    color: vars.colors.textSubtle,
+    color: vars.colors.textFocus,
+    lineHeight: "1.5"
   },
   heading: {
     fontSize: vars.fontSizes.md,
     fontFamily: vars.fonts.headFont,
-    fontWeight: "400",
+    fontWeight: "100",
     color: vars.colors.textFocus,
   },
   banner: {
     fontSize: vars.fontSizes.lg,
     fontFamily: vars.fonts.boldFont,
-    fontWeight: "500",
+    fontWeight: "100",
     color: vars.colors.textFocus,
     letterSpacing: vars.letterSpacings.tight,
 
@@ -296,6 +306,7 @@ export type SpacerVariants = "lg" | "md" | "sm" | "xs";
 
 export const spacerVariants: Record<SpacerVariants, string> = styleVariants({
   lg: {
+    backgroundColor: vars.colors.background,
     padding: "6rem",
     "@media": {
       "screen and (max-width: 800px)": {
@@ -307,6 +318,7 @@ export const spacerVariants: Record<SpacerVariants, string> = styleVariants({
     },
   },
   md: {
+    backgroundColor: vars.colors.background,
     padding: "3rem",
     "@media": {
       "screen and (max-width: 480px)": {
@@ -315,9 +327,11 @@ export const spacerVariants: Record<SpacerVariants, string> = styleVariants({
     },
   },
   sm: {
+    backgroundColor: vars.colors.background,
     padding: "1rem",
   },
   xs: {
+    backgroundColor: vars.colors.background,
     padding: "0.5rem",
   },
 });
