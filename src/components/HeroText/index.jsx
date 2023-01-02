@@ -4,7 +4,7 @@ const HeroText = () => {
   return (
     <>
       <Spacer size="sm" />
-      <BannerText>衝撃</BannerText>
+      <BannerText>ola</BannerText>
       <Spacer size="sm" />
     </>
   );

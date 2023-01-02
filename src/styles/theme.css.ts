@@ -55,10 +55,10 @@ const colors = createThemeContract({
 });
 
 export const lightTheme = createTheme(colors, {
-  background: "#1B2631",
+  background: "#fff",
   foreground: "#FFF",
   muted: "#E0E3E7",
-  textFocus: "#fff",
+  textFocus: "#000",
   textSubtle: "#3E5060",
   primary: "#007FFF",
   secondary: "#0059B2",

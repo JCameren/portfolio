@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { HYDRATE } from "next-redux-wrapper";
 import * as uiServices from "../../utilities/ui-services"
 
 const initialState = {
@@ -9,13 +10,15 @@ const uiSlice = createSlice({
     name: 'ui',
     initialState,
     reducers: {
-        setToLightMode() {
-            localStorage.setItem("theme", "light")
-            uiServices.checkLocalStorage()
+        toggleTheme(state) {
+            state.isLightMode = !state.isLightMode
         },
-        setToDarkMode() {
-            localStorage.removeItem("theme")
-            uiServices.checkLocalStorage()
+    },
+    extraReducers: {
+        [HYDRATE]: (state) => {
+            return {
+                ...state
+            }
         }
     }
 })

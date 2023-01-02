@@ -219,7 +219,7 @@ export const button = style({
   borderRadius: "0.375rem",
   fontSize: vars.fontSizes.md,
   fontFamily: vars.fonts.textFont,
-  padding: "1rem 3rem",
+  padding: "0.5rem 2rem",
   border: `1px solid ${vars.colors.muted}`,
   letterSpacing: vars.letterSpacings.tight,
   display: "inline-flex",

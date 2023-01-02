@@ -4,7 +4,7 @@ const Tagline = () => {
   return (
     <>
       <Flex>
-        <SmallText>ABOUT:</SmallText>
+        <SmallText>ABOUT</SmallText>
         <Spacer size="xs" />
         <Text>
           Hey there! I'm Cameren, a recent graduate of a software engineering
