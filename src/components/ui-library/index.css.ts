@@ -6,7 +6,7 @@ import { vars } from "../../styles/theme.css";
 export const container = style({
   margin: vars.positions.trueCenter,
   position: "relative",
-  // border: '1px solid white'
+  overflow: "hidden !important"
 });
 
 export type Containers = "large" | "medium" | "small" | "extraSmall";
