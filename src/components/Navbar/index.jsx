@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button, Container, Flex, Spacer } from "../ui-library";
+import { Button, Container, Flex, SmallText, Spacer } from "../ui-library/index.js";
 import * as styles from "./index.css";
 
 const Navbar = () => {
@@ -9,9 +9,9 @@ const Navbar = () => {
         <Container as="div" size="large">
           <Flex variant="spaceBetween">
             <Link href={"/"}>
-              cj
+              <img src='/logo.svg' alt="website logo"  width="20px"/>
             </Link>
-            <Button variant="filled">Resume</Button>
+            <SmallText>v1.0</SmallText>
           </Flex>
         </Container>
       </header>

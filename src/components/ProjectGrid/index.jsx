@@ -9,7 +9,7 @@ import {
   Spacer,
   Flex,
   SmallText,
-} from "../ui-library";
+} from "../ui-library/index.js";
 
 const ProjectGrid = ({ posts }) => {
   return (

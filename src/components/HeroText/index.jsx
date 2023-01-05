@@ -1,10 +1,12 @@
-import { BannerText, Spacer, Text } from "../ui-library";
+import { BannerText, Spacer } from "../ui-library/index.js";
 
 const HeroText = () => {
   return (
     <>
       <Spacer size="sm" />
-      <BannerText>ola</BannerText>
+      <BannerText>
+        <img src={'/logo.svg' } alt="" style={{ width: "2.6rem" }}/>
+      </BannerText>
       <Spacer size="sm" />
     </>
   );

@@ -1,4 +1,4 @@
-import { Text, Grid, SmallText, Flex, Spacer } from "../ui-library/index";
+import { Text, Grid, SmallText, Flex, Spacer } from "../ui-library/index.js";
 
 const Tagline = () => {
   return (

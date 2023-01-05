@@ -3,10 +3,10 @@ import Tagline from "../components/Tagline/index";
 import Projects from "../components/Projects";
 import HeroText from "../components/HeroText";
 import Seo from "../components/Seo/index";
-import { Container } from "../components/ui-library";
+import { Container } from "../components/ui-library/index.js";
 import TransitionUp from "../components/animations/TransitionUp";
 
-const Home = ({ posts }) => {
+const Home: React.FC<{posts: string[]}> = ({ posts }) => {
   return (
     <>
       <Seo
@@ -16,7 +16,7 @@ const Home = ({ posts }) => {
         my portfolio to see my skills and experiences in software development."
       />
       <TransitionUp>
-        <Container size="small">
+        <Container size="small" space={null}>
           <HeroText />
           <Tagline />
         </Container>
