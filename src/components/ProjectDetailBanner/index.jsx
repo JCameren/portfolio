@@ -7,7 +7,7 @@ const ProjectDetailBanner = ({ image }) => {
     <Container size="medium">
       <div className={styles.bannerImgWrapper}>
         {/* this handler class was a godsend https://www.youtube.com/watch?v=P7i5YIJRJew */}
-        <Image src={image.url} alt="project image" width={900} height={700} className={styles.imageResHandler} />
+        <Image src={image.url} alt="project image" className={styles.imageResHandler} fill />
       </div>
       <Spacer size="md" />
     </Container>
