@@ -6,7 +6,7 @@ const HeroText = () => {
     <>
       <Spacer size="sm" />
       <BannerText>
-        <Image src={'/logo.svg' } width={41.6} height={41.6} />
+        <Image src={'/logo.svg' } width={41.6} height={41.6} priority alt="website logo"/>
       </BannerText>
       <Spacer size="sm" />
     </>

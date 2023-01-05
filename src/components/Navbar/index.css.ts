@@ -20,7 +20,7 @@ export const desktopNavWrapper = style({
 
 
   "@media" : {
-    "screen and (max-width: 375px)": {
+    "screen and (max-width: 480px)": {
       width: "100%",
       top: "0 !important",
       transform: "none"

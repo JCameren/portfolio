@@ -11,7 +11,7 @@ const Navbar = () => {
         <Container as="div" size="large">
           <Flex variant="spaceBetween">
             <Link href={"/"}>
-              <Image src='/logo.svg' alt="website logo"  width={20}  height={20} />
+              <Image src='/logo.svg' alt="website logo"  width={20}  height={20} priority/>
             </Link>
             <SmallText>v1.0</SmallText>
           </Flex>
