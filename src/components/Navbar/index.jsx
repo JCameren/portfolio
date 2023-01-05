@@ -5,6 +5,7 @@ import * as styles from "./index.css";
 const Navbar = () => {
   return (
     <>
+    <Spacer size="sm" />
       <header className={styles.desktopNavWrapper}>
         <Container as="div" size="large">
           <Flex variant="spaceBetween">
