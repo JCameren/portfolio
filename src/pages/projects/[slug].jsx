@@ -4,6 +4,7 @@ import {
   SLUG_REQUEST,
 } from "../../utilities/hygraph-api";
 import Seo from "../../components/Seo";
+import TransitionUp from '../../components/animations/TransitionUp'
 import ProjectDetailBanner from "../../components/ProjectDetailBanner";
 import ProjectDetailContent from "../../components/ProjectDetailContent";
 import ProjectDetailHeader from "../../components/ProjectDetailHeader";
@@ -11,12 +12,12 @@ import ProjectDetailHeader from "../../components/ProjectDetailHeader";
 const ProjectDetails = ({ post }) => {
   const { title, image, richText, description } = post;
   return (
-    <>
+    <TransitionUp>
       <Seo title={title} description={description} />
       <ProjectDetailHeader title={title} />
       <ProjectDetailBanner image={image} />
       <ProjectDetailContent richText={richText} />
-    </>
+    </TransitionUp>
   );
 };
 

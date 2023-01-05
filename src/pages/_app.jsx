@@ -1,4 +1,3 @@
-import { wrapper } from "../store/store";
 import { AnimatePresence } from "framer-motion";
 import Layout from "../components/Layout/index";
 import { darkTheme } from "../styles/theme.css";
@@ -18,4 +17,4 @@ const App = ({ Component, pageProps, router }) => {
   );
 };
 
-export default wrapper.withRedux(App);
+export default App

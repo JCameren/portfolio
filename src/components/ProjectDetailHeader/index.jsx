@@ -4,6 +4,7 @@ import {
   BannerText,
   Spacer,
   Button,
+  Heading,
 } from "../ui-library/index";
 import * as styles from './index.css'
 
@@ -12,7 +13,7 @@ const ProjectDetailHeader = ({ title }) => {
     <>
       <Container size="large" as="header">
         <Flex variant="center">
-          <BannerText className={styles.projectHeaderWrapper}>{title}</BannerText>
+          <Heading className={styles.projectHeaderWrapper}>{title}</Heading>
         </Flex>
       </Container>
       <Spacer size="md" />

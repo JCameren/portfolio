@@ -12,6 +12,12 @@ import {
 } from "../ui-library/index.js";
 
 const ProjectGrid = ({ posts }) => {
+  const orderPostByDate = [...posts].map(post => {
+    return { ...post, date: new Date(post.date) }
+  })
+
+  const sortedPosts = [...orderPostByDate].sort((a, b) => Number(b.date) - Number(a.date))
+
   return (
     <>
       <Container size="small">
@@ -20,7 +26,7 @@ const ProjectGrid = ({ posts }) => {
       <Spacer size="sm" />
       <Container size="medium">
         <Grid>
-          {posts.map(({ id, title, description, slug, date }) => (
+          {sortedPosts.map(({ id, title, description, slug, date }) => (
             <Link href={`/projects/${slug}`} key={id}>
               <Card variant="outlined">
                 <Flex variant="spaceBetween">
@@ -31,7 +37,8 @@ const ProjectGrid = ({ posts }) => {
                 </Flex>
                 <Spacer size="md" />
                 <Heading>{title}</Heading>
-                <Text>{description}</Text>
+                <Spacer size="xs" />
+                <SmallText>{description}</SmallText>
               </Card>
             </Link>
           ))}
