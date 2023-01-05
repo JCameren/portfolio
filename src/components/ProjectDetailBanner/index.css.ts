@@ -3,8 +3,8 @@ import { style } from "@vanilla-extract/css";
 export const bannerImgWrapper = style({
   position: "relative",
   width: "100%",
-  height: 'auto',
-  minHeight: "600px",
+  minHeight: '200px',
+  maxHeight: "600px",
   
 });
 
