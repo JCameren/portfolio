@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Seo from '../components/Seo/index'
 import {
   Container,
   Button,
@@ -11,6 +12,7 @@ const Custom500Page = () => {
   const router = useRouter();
   return (
     <>
+    <Seo title="500 Internal Server Error" description="Something went wrong with the server." />
       <Spacer size="lg" />
       <Container size="large">
         <Flex variant="center">
