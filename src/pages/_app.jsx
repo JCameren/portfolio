@@ -9,7 +9,9 @@ const App = ({ Component, pageProps, router }) => {
   return (
     <main className={darkTheme}>
       <Layout>
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait"
+        onExitComplete={() => window.scrollTo(0, 0)}
+        >
           <Component {...pageProps} key={router.asPath} />
         </AnimatePresence>
       </Layout>
