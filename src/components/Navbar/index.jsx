@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Button, Container, Flex, SmallText, Spacer } from "../ui-library/index.js";
+import Image from "next/image.js";
+import { Container, Flex, SmallText, Spacer } from "../ui-library/index.js";
 import * as styles from "./index.css";
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
         <Container as="div" size="large">
           <Flex variant="spaceBetween">
             <Link href={"/"}>
-              <img src='/logo.svg' alt="website logo"  width="20px"/>
+              <Image src='/logo.svg' alt="website logo"  width={20}  height={20} />
             </Link>
             <SmallText>v1.0</SmallText>
           </Flex>

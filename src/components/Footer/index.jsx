@@ -15,6 +15,7 @@ const Footer = () => {
                 <a
                   href="https://github.com/JCameren"
                   target="_blank"
+                  rel="noreferrer"
                   referrerPolicy="no-referrer"
                 >
                   <SmallText>
@@ -25,6 +26,7 @@ const Footer = () => {
                 <a
                   href="https://www.linkedin.com/in/camerenj/"
                   target="_blank"
+                  rel="noreferrer"
                   referrerPolicy="no-referrer"
                 >
                   <SmallText>

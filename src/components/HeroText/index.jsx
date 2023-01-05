@@ -1,3 +1,4 @@
+import Image from "next/image.js";
 import { BannerText, Spacer } from "../ui-library/index.js";
 
 const HeroText = () => {
@@ -5,7 +6,7 @@ const HeroText = () => {
     <>
       <Spacer size="sm" />
       <BannerText>
-        <img src={'/logo.svg' } alt="" style={{ width: "2.6rem" }}/>
+        <Image src={'/logo.svg' } width={41.6} height={41.6} />
       </BannerText>
       <Spacer size="sm" />
     </>
