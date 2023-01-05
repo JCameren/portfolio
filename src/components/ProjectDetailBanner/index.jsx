@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { Container, Spacer } from "../ui-library/index";
 import * as styles from "./index.css";
 
@@ -7,7 +7,7 @@ const ProjectDetailBanner = ({ image }) => {
     <Container size="medium">
       <div className={styles.bannerImgWrapper}>
         {/* this handler class was a godsend https://www.youtube.com/watch?v=P7i5YIJRJew */}
-        <Image src={image.url} alt="project image" width={900} height={200} className={styles.imageResHandler} />
+        <img src={image.url} alt="project image" className={styles.imageResHandler} />
       </div>
       <Spacer size="md" />
     </Container>
