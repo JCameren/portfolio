@@ -9,7 +9,7 @@ export const bannerImgWrapper = style({
 });
 
 export const imageResHandler = style({
-    objectFit: "contain",
+    objectFit: "cover",
     width: '100%',
     position: 'relative',
     height: 'unset !important'
