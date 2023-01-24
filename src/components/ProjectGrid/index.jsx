@@ -28,32 +28,32 @@ const ProjectGrid = ({ posts }) => {
       </Container>
       <Spacer size="sm" />
       <Container size="medium">
-        <Grid>
-          {sortedPosts.map(({ id, title, description, slug, date }) => (
-            <Link href={`/projects/${slug}`} key={id}>
-              <Card variant="outlined">
-                <Flex variant="spaceBetween">
-                  <Text>
-                    <BsCalendar4 />
-                  </Text>
-                  <Suspense>
+        <Suspense>
+          <Grid>
+            {sortedPosts.map(({ id, title, description, slug, date }) => (
+              <Link href={`/projects/${slug}`} key={id}>
+                <Card variant="outlined">
+                  <Flex variant="spaceBetween">
                     <Text>
-                      {new Date(date).toLocaleString("en-US", {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      })}
+                      <BsCalendar4 />
                     </Text>
-                  </Suspense>
-                </Flex>
-                <Spacer size="md" />
-                <Heading>{title}</Heading>
-                <Spacer size="xs" />
-                <SmallText>{description}</SmallText>
-              </Card>
-            </Link>
-          ))}
-        </Grid>
+                      <Text>
+                        {new Date(date).toLocaleString("en-US", {
+                          day: "numeric",
+                          month: "long",
+                          year: "numeric",
+                        })}
+                      </Text>
+                  </Flex>
+                  <Spacer size="md" />
+                  <Heading>{title}</Heading>
+                  <Spacer size="xs" />
+                  <SmallText>{description}</SmallText>
+                </Card>
+              </Link>
+            ))}
+          </Grid>
+        </Suspense>
       </Container>
     </>
   );
