@@ -1,1 +1,1 @@
-# [ WIP 👨‍💻 ]
+# First iteration of my portfolio website

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { BsCalendar4 } from "react-icons/bs";
 import {
   Container,
@@ -12,11 +13,13 @@ import {
 } from "../ui-library/index.js";
 
 const ProjectGrid = ({ posts }) => {
-  const orderPostByDate = [...posts].map(post => {
-    return { ...post, date: new Date(post.date) }
-  })
+  const orderPostByDate = [...posts].map((post) => {
+    return { ...post, date: new Date(post.date) };
+  });
 
-  const sortedPosts = [...orderPostByDate].sort((a, b) => Number(b.date) - Number(a.date))
+  const sortedPosts = [...orderPostByDate].sort(
+    (a, b) => Number(b.date) - Number(a.date)
+  );
 
   return (
     <>
@@ -33,7 +36,15 @@ const ProjectGrid = ({ posts }) => {
                   <Text>
                     <BsCalendar4 />
                   </Text>
-                  <Text>{new Date(date).toLocaleString('en-US', {day:'numeric', month: 'long', year:'numeric'})}</Text>
+                  <Suspense>
+                    <Text>
+                      {new Date(date).toLocaleString("en-US", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </Text>
+                  </Suspense>
                 </Flex>
                 <Spacer size="md" />
                 <Heading>{title}</Heading>
