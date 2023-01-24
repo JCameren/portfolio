@@ -21,6 +21,14 @@ const ProjectGrid = ({ posts }) => {
     (a, b) => Number(b.date) - Number(a.date)
   );
 
+  const formattedDate = (dateStr) => {
+    return new Date(dateStr).toLocaleString("en-US", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    })
+  }
+
   return (
     <>
       <Container size="small">
@@ -39,11 +47,7 @@ const ProjectGrid = ({ posts }) => {
                     </Text>
                     <Suspense>
                       <Text>
-                        {new Date(date).toLocaleString("en-US", {
-                          day: "numeric",
-                          month: "long",
-                          year: "numeric",
-                        })}
+                        {formattedDate(date)}
                       </Text>
                     </Suspense>
                   </Flex>
