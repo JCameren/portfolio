@@ -37,6 +37,7 @@ const ProjectGrid = ({ posts }) => {
                     <Text>
                       <BsCalendar4 />
                     </Text>
+                    <Suspense>
                       <Text>
                         {new Date(date).toLocaleString("en-US", {
                           day: "numeric",
@@ -44,6 +45,7 @@ const ProjectGrid = ({ posts }) => {
                           year: "numeric",
                         })}
                       </Text>
+                    </Suspense>
                   </Flex>
                   <Spacer size="md" />
                   <Heading>{title}</Heading>
