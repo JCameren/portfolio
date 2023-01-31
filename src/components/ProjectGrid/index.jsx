@@ -13,20 +13,13 @@ import {
 
 const ProjectGrid = ({ posts }) => {
   const orderPostByDate = [...posts].map((post) => {
-    return { ...post, date: new Date(post.date) };
+    return { ...post, date: post.date };
   });
 
   const sortedPosts = [...orderPostByDate].sort(
     (a, b) => Number(b.date) - Number(a.date)
   );
 
-  const formattedDate = (dateStr) => {
-    return new Date(dateStr).toLocaleString("en-US", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    });
-  };
 
   return (
     <>
@@ -44,7 +37,7 @@ const ProjectGrid = ({ posts }) => {
                     <BsCalendar4 />
                   </Text>
                   <div suppressHydrationWarning>
-                    <Text>{formattedDate(date)}</Text>
+                    <Text>{date}</Text>
                   </div>
                 </Flex>
                 <Spacer size="md" />
