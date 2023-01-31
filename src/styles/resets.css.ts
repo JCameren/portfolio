@@ -20,6 +20,15 @@ globalStyle("main", {
   overflowX: "hidden"
 });
 
+globalStyle("h3", {
+  fontSize: "1.75rem",
+  margin: "1rem 0 1rem 0"
+})
+
+globalStyle("p", {
+  margin: "1.25rem 0 1.25rem 0"
+})
+
 globalStyle("a", {
   textDecoration: 'none',
   color: 'inherit'

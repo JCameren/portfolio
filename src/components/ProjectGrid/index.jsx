@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Suspense } from "react";
 import { BsCalendar4 } from "react-icons/bs";
 import {
   Container,
@@ -25,9 +24,9 @@ const ProjectGrid = ({ posts }) => {
     return new Date(dateStr).toLocaleString("en-US", {
       day: "numeric",
       month: "long",
-      year: "numeric"
-    })
-  }
+      year: "numeric",
+    });
+  };
 
   return (
     <>
@@ -36,30 +35,26 @@ const ProjectGrid = ({ posts }) => {
       </Container>
       <Spacer size="sm" />
       <Container size="medium">
-        <Suspense>
-          <Grid>
-            {sortedPosts.map(({ id, title, description, slug, date }) => (
-              <Link href={`/projects/${slug}`} key={id}>
-                <Card variant="outlined">
-                  <Flex variant="spaceBetween">
-                    <Text>
-                      <BsCalendar4 />
-                    </Text>
-                    <Suspense>
-                      <Text>
-                        {formattedDate(date)}
-                      </Text>
-                    </Suspense>
-                  </Flex>
-                  <Spacer size="md" />
-                  <Heading>{title}</Heading>
-                  <Spacer size="xs" />
-                  <SmallText>{description}</SmallText>
-                </Card>
-              </Link>
-            ))}
-          </Grid>
-        </Suspense>
+        <Grid>
+          {sortedPosts.map(({ id, title, description, slug, date }) => (
+            <Link href={`/projects/${slug}`} key={id}>
+              <Card variant="outlined">
+                <Flex variant="spaceBetween">
+                  <Text>
+                    <BsCalendar4 />
+                  </Text>
+                  <div suppressHydrationWarning>
+                    <Text>{formattedDate(date)}</Text>
+                  </div>
+                </Flex>
+                <Spacer size="md" />
+                <Heading>{title}</Heading>
+                <Spacer size="xs" />
+                <SmallText>{description}</SmallText>
+              </Card>
+            </Link>
+          ))}
+        </Grid>
       </Container>
     </>
   );
