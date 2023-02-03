@@ -10,6 +10,8 @@ export const POSTS_REQUEST = gql`
       id
       slug
       title
+      demoUrl
+      githubUrl
       image {
         url
       }
